@@ -1,0 +1,9 @@
+from average_score import create_average_score_csv
+from employment_status import create_employment_status_csv
+from enriched_bank_data import create_enriched_bank_data_csv
+from score_ranges import create_score_ranges_csv
+
+create_average_score_csv()
+create_employment_status_csv()
+create_enriched_bank_data_csv()
+create_score_ranges_csv()

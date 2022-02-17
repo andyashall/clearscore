@@ -1,0 +1,53 @@
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry]
+name = "clearscore_exersize"
+version = "0.1.0"
+description = ""
+authors = []
+packages = [
+    { include = "src", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "~3.9"
+adal = "^1.2.2"
+numpy = "^1.22"
+pandas = "^1.4.1"
+ipython = "^7.4.0"
+jsonschema = "^3.2.0"
+
+[tool.poetry.dev-dependencies]
+black = "^19.10b0"
+coverage = {extras = ["toml"], version = "^5.3"}
+python-dateutil = ">=2.8.1"
+ddlparse = "^1.9.0"
+flake8 = "^3.7.9"
+flake8-black = "^0.1.1"
+flake8-bugbear = "^20.1.4"
+flake8-builtins = "^1.4.2"
+flake8-comprehensions = "^3.2.2"
+flake8-docstrings = "^1.5.0"
+flake8-isort = "^2.8.0"
+flake8-logging-format = "^0.6.0"
+flake8-mutable = "^1.2.0"
+flake8-requirements = "^1.3.1"
+isort = "^4.3.21"
+mypy = "^0.761"
+pep8-naming = "^0.9.1"
+rope = "^0.16.0"
+unittest-xml-reporting = "^3.0.4"
+
+[tool.black]
+target-version = ["py37"]
+
+[tool.coverage.run]
+branch = true
+command_line = "-m xmlrunner discover -s src/"
+dynamic_context = "test_function"
+source = ["src"]
+
+[tool.coverage.html]
+show_contexts = true

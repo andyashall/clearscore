@@ -1,8 +1,8 @@
 # Clearscore Coding Exercise - Andrew Ashall
 
-## Set up
+## Set up
 
-1. Clone repo using `git clone ...`
+1. Clone repo using `git clone https://github.com/andyashall/clearscore.git`
 2. Install poetry using `python -m pip3 install poetry`
 3. Install packages `poetry install`
 4. Activate the virtual environment `source .venv/bin/activate`

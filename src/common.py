@@ -44,10 +44,18 @@ def get_latest_report_for_user(account_id: str, reports: list) -> object:
 
 
 def get_report_score(report: object) -> int:
-    """Return the Report -> ScoreBlock -> Delphi -> Score of a given report."""
+    """
+    Return the Report -> ScoreBlock -> Delphi -> Score of a given report as an int.
+    
+    Return None for reports with incorrect keys or values.
+    """
     if report is not None:
         try:
             score = report["report"]["ScoreBlock"]["Delphi"]
-            return score[0]["Score"]
+            return int(score[0]["Score"])
         except KeyError:
+            pass
+        except ValueError:
+            pass
+        except IndexError:
             pass

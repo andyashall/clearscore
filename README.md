@@ -11,3 +11,7 @@
 ## Producing outputs
 
 Each file within `src/` corresponds to a question and will product a single csv file with the expected outputs in the outputs directory. To run all files and produce the output csv files make sure the python virtual environment is active and run `python src/main.py`
+
+## Unit tests
+
+Tests can be ran via the VSCode Testing tab or using `coverage run -m unittest discover`
